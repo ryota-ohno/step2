@@ -40,7 +40,7 @@ def init_process(args):
         R3_list=[np.round(R3,1) for R3 in np.linspace(-np.round(4,1),np.round(4,1),int(np.round(np.round(8,1)/0.4))+1)]
         R4_list=[np.round(R4,1) for R4 in np.linspace(-np.round(4,1),np.round(4,1),int(np.round(np.round(8,1)/0.4))+1)]
         S_list=[]##Sには-a*b Sの極大がa*bの極小
-        for R3 in R3_list:
+        for R3 in tqdm(R3_list):
             S1_list=[]
             for R4 in R4_list:
                 t1_clps=vdw_R_step2(A1,A2,theta,phi,R4,'t1',monomer_name)
